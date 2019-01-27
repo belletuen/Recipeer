@@ -15,7 +15,7 @@ public class DataModel {
     public void setIngredients(String[] ingredients) {
         this.Ingredients = ingredients;
     }
-    public int getIngredients() {
+    public String[] getIngredients() {
         return this.Ingredients;
     }
     public void setRecipes(String recipes) {
