@@ -97,6 +97,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_grocery_lists) {
             Intent intent = new Intent(this, GroceryLists.class);
             startActivity(intent);
+        } else if (id == R.id.nav_main_databasedab) {
+            Intent intent = new Intent(this, MainDatabasedab.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

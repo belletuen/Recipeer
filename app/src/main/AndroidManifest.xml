@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainDatabasedab"></activity>
         <activity
             android:name=".GroceryLists"
             android:label="@string/title_activity_grocery_lists"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".NewRecipe"
             android:label="@string/title_activity_new_recipe"
