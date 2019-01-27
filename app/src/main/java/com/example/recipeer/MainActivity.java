@@ -89,9 +89,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MyRecipies.class);
             startActivity(intent);
         } else if (id == R.id.nav_saved_recipes) {
-
+            Intent intent = new Intent(this, SavedRecipes.class);
+            startActivity(intent);
         } else if (id == R.id.nav_add_new_recipe) {
-
+            Intent intent = new Intent(this, NewRecipe.class);
+            startActivity(intent);
         } else if (id == R.id.nav_friends) {
 
         } else if (id == R.id.nav_send) {
