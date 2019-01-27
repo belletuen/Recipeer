@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black"
             android:title="Home" />
         <item
             android:id="@+id/nav_my_recipes"
@@ -18,11 +18,11 @@
             android:title="Saved Recipes" />
         <item
             android:id="@+id/nav_add_new_recipe"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_library_add_black"
             android:title="Add New Recipe" />
         <item
             android:id="@+id/nav_grocery_lists"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_shopping_basket_black"
             android:title="Grocery Lists" />
     </group>
 
