@@ -7,14 +7,6 @@
     android:fitsSystemWindows="true"
     tools:context=".MyRecipies">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="187dp"
-        android:layout_height="56dp"
-        android:text="TextView"
-        android:textSize="30sp"
-        tools:text="My Recipies" />
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -25,7 +17,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="132dp"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
