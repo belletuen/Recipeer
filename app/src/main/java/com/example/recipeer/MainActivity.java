@@ -1,5 +1,6 @@
 package com.example.recipeer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,7 +84,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_my_recipes) {
-
+            Intent intent = new Intent(this, MyRecipies.class);
+            startActivity(intent);
         } else if (id == R.id.nav_saved_recipes) {
 
         } else if (id == R.id.nav_add_new_recipe) {
