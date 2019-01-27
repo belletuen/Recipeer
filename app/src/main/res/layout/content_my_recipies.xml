@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MyRecipies"
     tools:showIn="@layout/activity_my_recipies">
 
 
+    <TextView android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF0000"
+        android:text="@string/large_text"/>
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
@@ -19,12 +22,6 @@
         android:background="#00FF00"
         android:layout_weight="1"
         android:drawSelectorOnTop="false"/>
-
-    <TextView android:id="@android:id/empty"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FF0000"
-        android:text="@string/large_text"/>
 
 
 </android.support.v4.widget.NestedScrollView>
