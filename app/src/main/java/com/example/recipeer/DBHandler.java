@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.view.View;
+
+import java.text.BreakIterator;
 
 import static android.os.Build.ID;
 
@@ -54,8 +57,8 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
-    public DataModel findHandler(String ingredients) {
-        String query = "Select * FROM " + TABLE_NAME + "WHERE" + COLUMN_NAME + " = " + "'" + ingredients + "'";
+    public DataModel findHandler(String in) {
+        String query = "Select * FROM " + TABLE_NAME + "WHERE" + COLUMN_NAME + " = " + "'" + in + "'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         DataModel datamodel = new DataModel();
@@ -70,9 +73,9 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
         return datamodel;
     }
-    public boolean deleteHandler(String recipes) {
+    public boolean deleteHandler(String re) {
         boolean result = false;
-        String query = "Select*FROM " + TABLE_NAME + "WHERE" + COLUMN_ID + "= '" + String.valueOf(ID) + "'";
+        String query = "Select*FROM " + TABLE_NAME + "WHERE" + COLUMN_ID + "= '" + String.valueOf(re) + "'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         DataModel datamodel = new DataModel();
@@ -88,11 +91,11 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
         return result;
     }
-    public boolean updateHandler(String recipes, String name) {
+    public boolean updateHandler(String re, String in) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues args = new ContentValues();
-        args.put(COLUMN_ID, ID);
-        args.put(COLUMN_NAME, name);
+        args.put(COLUMN_ID, re);
+        args.put(COLUMN_NAME, in);
         return db.update(TABLE_NAME, args, COLUMN_ID + "=" + ID, null) > 0;
     }
 }
